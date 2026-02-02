@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fit Body Club</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: slideDown 1.5s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    nav {
+      background: #ff3c00;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: black;
+      background: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 20px;
+      background: white;
+      margin: 15px;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #ff3c00;
+    }
+
+    .services li {
+      padding: 8px;
+      transition: 0.3s;
+    }
+
+    .services li:hover {
+      transform: translateX(10px) scale(1.05);
+      color: #ff3c00;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #ff3c00;
+      color: white;
+      padding: 10px;
+      border: none;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e63500;
+      transform: scale(1.05);
+    }
+
+    .contact-box {
+      background: #ffe6dc;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-align: center;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    #gymName {
+      font-size: 36px;
+      color: #ff3c00;
+      text-shadow: 0 0 10px #ff3c00, 0 0 20px #ff6a00;
+      animation: bounce 2s infinite, glow 1.5s ease-in-out infinite alternate;
+      display: inline-block;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff3c00; }
+      to { text-shadow: 0 0 30px #ff6a00; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 id="gymName">Fit Body Club</h1>
+  <p>Build Your Body, Build Your Confidence 💪</p>
+  <p>💪💪Live to Train= Train to Live💪💪</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#timing">Timing</a>
+  <a href="#contact">Contact</a>
+  <a href="#address">address</a>
+</nav>
+
+<section id="about">
+  <h2>About Our Gym</h2>
+  <p>
+    Fit Body Club ek modern gym hai jahan aap apni body, strength aur
+    confidence dono bana sakte ho. Certified trainers aur latest machines
+    available hain.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <ul class="services">
+    <li>🏋️ Weight Training</li>
+    <li>🤸 Cardio Workout</li>
+    <li>🥗 Diet & Nutrition Plan</li>
+    <li>🧘 Yoga & Stretching</li>
+    <li>💪 Personal Training</li>
+    <li>Cafe Area</li>
+  </ul>
+</section>
+
+<section id="timing">
+  <h2>Gym Timing</h2>
+  <p>Monday - Saturday: 5:00 AM - 10:00 PM</p>
+  <p>Sunday: close</p>
+</section>
+<section id="address ">
+   <h2>Address</h2>
+    <p>Aurai, Ghoshiya road,vrindavan textile , Bhadohi</p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="contact-box">
+    📞 Call / WhatsApp <br>
+    <span style="color:#ff3c00; font-size:20px;">9044086043</span>
+  </div>
+
+  <div class="contact-box" style="animation:none;">
+    📸 Instagram <br>
+    <a href="https://www.instagram.com/fit_boy_ashwani?igsh=MWt2aGxlYWpzZ3Fucg==" 
+       target="_blank"
+       style="color:#ff3c00; font-size:18px; text-decoration:none;">
+      @fit_boy_ashwani
+    </a>
+  </div>
+
+  <form onsubmit="sendMessage(); return false;">
+    <label>Name:</label>
+    <input type="text" id="name" required>
+
+    <label>Mobile:</label>
+    <input type="number" id="mobile" required>
+
+    <label>Message:</label>
+    <textarea id="message" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Fit Body Club | Designed by Vishwas</p>
+</footer>
+
+<script>
+  function sendMessage() {
+    let name = document.getElementById("name").value;
+    alert("Thank you " + name + "! Your message has been sent 💪");
+  }
+
+  const text = "Fit Body Club";
+  let i = 0;
+  const gymName = document.getElementById("gymName");
+  gymName.innerHTML = "";
+
+  function typeEffect() {
+    if (i < text.length) {
+      gymName.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 150);
+    }
+  }
+  typeEffect();
+
+  const sections = document.querySelectorAll("section");
+  function showOnScroll() {
+    const triggerBottom = window.innerHeight - 100;
+    sections.forEach(section => {
+      if (section.getBoundingClientRect().top < triggerBottom) {
+        section.classList.add("show");
+      }
+    });
+  }
+  window.addEventListener("scroll", showOnScroll);
+  showOnScroll();
+</script>
+
+</body>
+</html>
